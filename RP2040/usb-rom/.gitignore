@@ -1,0 +1,7 @@
+build
+*.bin
+*.img
+*.cdr
+*.iso
+*.dmg
+*.tar
