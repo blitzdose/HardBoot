@@ -19,6 +19,16 @@ OS you want to boot when the switch is off and the third boot option is the OS
 you want to boot when the switch is on.
 6. Save, reboot and see the magic happen
 
+## Flasing
+Put your RP2040 Zero in BOOTSEL mode by holding `BOOT` and pressing `RESET`. Then run the following commands.
+After the second command, your Board should be detected as a mass storage device containing a `DATA.TXT` and `EFI/BOOT/BOOTX64.EFI` file.
+
+```
+picotool load -n fat12.img -t bin -o 0x10010000
+picotool load -f -x waveshare_rp2040_zero.uf2
+```
+
+
 ## Building
 
 To build the project do the following steps. Currently only Linux is supported. Use WSL if you are on Windows.
@@ -34,7 +44,7 @@ git submodule update --init --recursive
 2. Install nececcary tools
 
 ```
-sudo apt install mtools
+sudo apt install make gcc cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib picotool dosfstools
 ```
 
 3. Build
@@ -42,6 +52,7 @@ sudo apt install mtools
 ```
 make
 ```
+There will be an error shown at the end. Something like "Re-reading the partition table failed.: Invalid argument". Don't worry about it. It still works.
 
 4. Upload
 
@@ -49,7 +60,7 @@ Either run `make upload` or the following commands manually to upload:
 
 ```
 picotool load -n build/fat12.img -t bin -o 0x10010000
-picotool load -f -x build/waveshare_rp2040_zero.uf2.uf2
+picotool load -f -x build/waveshare_rp2040_zero.uf2
 ```
 
 ## Credit
