@@ -30,7 +30,7 @@ picotool load -f -x waveshare_rp2040_zero.uf2
 
 ## Known issues
 Make sure you are using the boot entries configured by your OS durin install (Usually "Windows Boot Manager", "Debain", etc.).
-Do not use plain devices (Like "NVME0"), as these might not work. If you run into a situation where HardBoot shows some error, feel free
+DO NOT use plain devices (Like "NVME0"), as these might not work. If you run into a situation where HardBoot shows some error, feel free
 to open an issue.
 
 ## Building
