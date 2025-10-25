@@ -50,3 +50,7 @@ Either run `make upload` or the following commands manually to upload:
 picotool load -n build/fat12.img -t bin -o 0x10010000
 picotool load -f -x build/waveshare_rp2040_zero.uf2.uf2
 ```
+
+## Credit
+Most of the RP2040 code is from [https://github.com/sergev/usb-rom/tree/main](https://github.com/sergev/usb-rom/tree/main), 
+I just added very few modifications to it.
