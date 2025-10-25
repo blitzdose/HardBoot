@@ -56,4 +56,3 @@ dkms.conf
 efi/build
 build
 RP2040/build
-efi/gnu-efi/x86_64
