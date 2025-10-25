@@ -27,6 +27,7 @@ To build the project do the following steps. Currently only Linux is supported. 
 
 ```
 git clone https://github.com/blitzdose/HardBoot.git
+cd HardBoot
 git submodule update --init --recursive
 ```
 
