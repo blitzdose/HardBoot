@@ -1,0 +1,6 @@
+[submodule "efi/gnu-efi"]
+	path = efi/gnu-efi
+	url = https://git.code.sf.net/p/gnu-efi/code
+[submodule "RP2040/pico-sdk"]
+	path = RP2040/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
