@@ -1,7 +1,7 @@
 # HardBoot
 A hardware boot order switch
 
-This project uses a RP2040 zero and a switch to select which OS to boot.
+This project uses an RP2040 zero and a switch to select which OS to boot.
 It emulates an EFI partition and comes with it's own EFI application
 that will boot the appropriate OS.
 
